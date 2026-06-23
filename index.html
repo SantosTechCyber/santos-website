@@ -1,22 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Santos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Santos | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #38bdf8;
+      font-size: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      background: rgba(0,0,0,0.3);
+      margin-top: 40px;
+    }
+
+    .highlight {
+      color: #38bdf8;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hello, I'm Santos 👋</h1>
 
-    <p>Welcome to my first website.</p>
+<header>
+  <h1>Hi, I'm <span class="highlight">Santos</span> 👋</h1>
+  <p>Beginner Web Developer | Learning GitHub & Web Development</p>
+  <a class="btn" href="#projects">View My Work</a>
+</header>
 
-    <h2>About Me</h2>
-    <p>I'm learning technology and GitHub.</p>
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    I am learning web development and building projects using HTML, CSS, JavaScript, and GitHub Pages.
+  </div>
+</section>
 
-    <h2>My Goals</h2>
-    <ul>
-        <li>Learn HTML</li>
-        <li>Learn CSS</li>
-        <li>Learn JavaScript</li>
-        <li>Build cool projects</li>
-    </ul>
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">🌐 My First Website</div>
+  <div class="card">📘 Learning GitHub Notes</div>
+  <div class="card">💡 Future Project: Calculator App</div>
+</section>
+
+<section>
+  <h2>Goals</h2>
+  <div class="card">✔ Learn HTML</div>
+  <div class="card">✔ Learn CSS</div>
+  <div class="card">✔ Learn JavaScript</div>
+  <div class="card">🚀 Become a Developer</div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    Email: yourname@email.com <br/>
+    GitHub: SantosTechCyber
+  </div>
+</section>
+
+<footer>
+  Built with ❤️ using GitHub Pages
+</footer>
+
 </body>
 </html>
