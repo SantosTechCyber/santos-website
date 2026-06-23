@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Santos Tech | AI Systems</title>
 
 <style>
@@ -13,7 +12,6 @@ body{
 font-family:Segoe UI,sans-serif;
 background:#020617;
 color:#e2e8f0;
-scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -25,7 +23,6 @@ padding:15px 20px;
 display:flex;
 justify-content:space-between;
 background:rgba(0,0,0,0.7);
-backdrop-filter:blur(10px);
 z-index:1000;
 }
 
@@ -64,32 +61,34 @@ cursor:pointer;
 /* SECTION */
 .section{
 padding:80px 20px;
-text-align:center;
-background-size:cover;
-background-position:center;
 }
 
-.overlay{
-background:rgba(0,0,0,0.75);
-padding:40px;
-border-radius:15px;
-max-width:900px;
+.container{
+max-width:1100px;
 margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
 }
 
-/* VIDEO */
+.container img{
+width:100%;
+border-radius:15px;
+}
+
 video{
 width:100%;
 border-radius:12px;
-margin-top:20px;
+margin-top:15px;
 }
 
-/* STATS */
 .dashboard{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:15px;
 margin-top:20px;
+text-align:center;
 }
 
 .stat{
@@ -98,7 +97,10 @@ padding:15px;
 border-radius:10px;
 }
 
-/* FOOTER */
+@media(max-width:800px){
+.container{grid-template-columns:1fr;}
+}
+
 footer{
 text-align:center;
 padding:20px;
@@ -109,115 +111,153 @@ opacity:0.5;
 
 <body>
 
-<!-- NAV -->
 <div class="navbar">
 <b>Santos Tech</b>
 <div>
 <a href="#services">Services</a>
-<a href="#stats">Stats</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
 <div>
 <h1>Santos Tech 🚀</h1>
-<p>AI Systems • Websites • Bots • Marketing</p>
-
+<p>AI Systems • Automation • Digital Solutions</p>
 <button class="btn" onclick="playIntro()">🔊 Enable AI Voice</button>
 <a href="#services" class="btn">Explore</a>
-
 </div>
 </div>
 
-<!-- SERVICES -->
-<div id="services" class="section" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');">
-<div class="overlay">
-<h2>🌐 Website Development</h2>
-<p>Modern responsive websites</p>
-
+<!-- WEB DEVELOPMENT -->
+<div id="services" class="section">
+<div class="container">
+<div>
+<h2>🌐 Web Development</h2>
+<p>Modern responsive websites and systems for businesses.</p>
 <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 <source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4" type="video/mp4">
 </video>
-
+</div>
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 </div>
 </div>
 
-<div class="section" style="background-image:url('https://images.unsplash.com/photo-1587614382346-acb2d9b9c75c');">
-<div class="overlay">
-<h2>💬 WhatsApp Automation</h2>
-<p>Automated business chats</p>
+<!-- DATA ANNOTATION -->
+<div class="section">
+<div class="container">
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
+<div>
+<h2>📊 Data Annotation</h2>
+<p>High-quality labeling and AI training datasets.</p>
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
+<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
 
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1587614382346-acb2d9b9c75c">
+<!-- VCF CREATION -->
+<div class="section">
+<div class="container">
+<div>
+<h2>📇 VCF Creation</h2>
+<p>Bulk contact creation for marketing and distribution systems.</p>
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+<source src="https://cdn.pixabay.com/video/2023/01/19/146615-791997918_large.mp4" type="video/mp4">
+</video>
+</div>
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+</div>
+</div>
+
+<!-- WEB SCRAPING -->
+<div class="section">
+<div class="container">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<div>
+<h2>🕸️ Web Scraping</h2>
+<p>Extract data from websites for analysis and automation.</p>
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+<source src="https://cdn.pixabay.com/video/2022/10/10/135693-759580624_large.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+</div>
+
+<!-- TRANSCRIPTION -->
+<div class="section">
+<div class="container">
+<div>
+<h2>🎧 Transcription</h2>
+<p>Convert audio and video into accurate text.</p>
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1511376777868-611b54f68947">
+<source src="https://cdn.pixabay.com/video/2022/11/03/137410-767188918_large.mp4" type="video/mp4">
+</video>
+</div>
+<img src="https://images.unsplash.com/photo-1511376777868-611b54f68947">
+</div>
+</div>
+
+<!-- BOT DEVELOPMENT -->
+<div class="section">
+<div class="container">
+<img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
+<div>
+<h2>🤖 Bot Development</h2>
+<p>Automation bots for WhatsApp, business, and AI systems.</p>
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1605379399642-870262d3d051">
 <source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4" type="video/mp4">
 </video>
-
+</div>
 </div>
 </div>
 
 <!-- STATS -->
-<div id="stats" class="section" style="background:#020617;">
-<div class="overlay">
-<h2>📊 Stats</h2>
-
+<div class="section">
+<h2 style="text-align:center;">📊 Stats</h2>
 <div class="dashboard">
 <div class="stat"><h3>12+</h3><p>Orders</p></div>
 <div class="stat"><h3>5+</h3><p>Clients</p></div>
 <div class="stat"><h3>KSh 1,200+</h3><p>Revenue</p></div>
 </div>
-
-</div>
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="section">
-<div class="overlay">
+<div id="contact" class="section" style="text-align:center;">
 <h2>Contact</h2>
-
 <a class="btn" href="https://wa.me/254706180760">Chat on WhatsApp</a>
-
-</div>
 </div>
 
 <footer>
 © 2026 Santos Tech
 </footer>
 
-<!-- AUDIO FILES -->
-
-<!-- AI VOICE -->
+<!-- AUDIO -->
 <audio id="introAudio">
 <source src="https://cdn.pixabay.com/download/audio/2023/03/15/audio_0c2f0c5e6d.mp3" type="audio/mpeg">
 </audio>
 
-<!-- CLICK SOUND -->
 <audio id="clickSound">
 <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8a9b3a7e7.mp3" type="audio/mpeg">
 </audio>
 
-<!-- BACKGROUND AMBIENT -->
 <audio id="bgAudio" loop>
 <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3a6b3e0f5c.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-
-// play intro + background
 function playIntro(){
 document.getElementById("introAudio").play();
-let bg = document.getElementById("bgAudio");
-bg.volume = 0.2;
+let bg=document.getElementById("bgAudio");
+bg.volume=0.2;
 bg.play();
 }
 
-// click sound
 document.querySelectorAll(".btn").forEach(btn=>{
 btn.addEventListener("click",()=>{
 document.getElementById("clickSound").play();
 });
 });
-
 </script>
 
 </body>
