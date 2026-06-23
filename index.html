@@ -3,34 +3,25 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | AI & Digital Services</title>
+<title>Santos Tech | Professional Services</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
+background:#0b1220;
 color:white;
-background:#0a0f1c;
-overflow-x:hidden;
 }
 
-/* BACKGROUND IMAGE */
-.hero-bg{
-background:url("https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1400&q=80");
-background-size:cover;
-background-position:center;
-padding:80px 20px;
+/* HEADER */
+header{
 text-align:center;
+padding:60px 20px;
+background: radial-gradient(circle at top, #1e3a8a, #0b1220);
 }
 
-.overlay{
-background:rgba(0,0,0,0.75);
-padding:20px;
-}
-
-/* TITLE */
 h1{
-font-size:55px;
+font-size:52px;
 margin:0;
 }
 
@@ -38,37 +29,32 @@ p{
 color:#cbd5e1;
 }
 
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:12px 18px;
-margin:10px;
-background:#38bdf8;
-color:black;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
+/* SLIDER */
+.slider{
+max-width:1100px;
+margin:auto;
+overflow:hidden;
+border-radius:15px;
+}
+
+.slides{
+display:flex;
+transition:transform 0.6s ease-in-out;
+}
+
+.slide{
+min-width:100%;
+padding:25px;
+background:#111827;
+box-sizing:border-box;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:1fr 1fr;
 gap:20px;
-padding:40px;
-}
-
-/* CARD */
-.card{
-background:#111827;
-border-radius:15px;
-padding:15px;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
+align-items:center;
 }
 
 img, video{
@@ -76,6 +62,40 @@ width:100%;
 border-radius:12px;
 }
 
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:12px 18px;
+margin-top:10px;
+background:#38bdf8;
+color:black;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* NAV */
+.nav{
+text-align:center;
+margin:15px;
+}
+
+.nav button{
+padding:10px 15px;
+margin:5px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#1f2937;
+color:white;
+}
+
+.nav button:hover{
+background:#38bdf8;
+color:black;
+}
+
+/* TAGS */
 .tag{
 display:inline-block;
 padding:5px 10px;
@@ -86,127 +106,178 @@ margin:3px;
 color:#93c5fd;
 }
 
-/* MUSIC BUTTON */
-.music-control{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#38bdf8;
-color:black;
-padding:10px 15px;
-border-radius:10px;
-cursor:pointer;
-font-weight:bold;
+/* MOBILE */
+@media(max-width:800px){
+.grid{
+grid-template-columns:1fr;
 }
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-opacity:0.6;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND MUSIC (YOU ADD FILE) -->
-<audio id="bgmusic" loop>
-  <source src="assets/whisper.mp3" type="audio/mpeg">
-</audio>
-
-<!-- MUSIC BUTTON -->
-<div class="music-control" onclick="toggleMusic()">
-🎵 Music
-</div>
-
-<!-- HERO -->
-<div class="hero-bg">
-<div class="overlay">
-
+<header>
 <h1>Santos Tech 🚀</h1>
-<p>I build Websites, WhatsApp Bots, Digital Marketing & AI Data Systems</p>
+<p>Professional Digital Services — Websites, Bots, Marketing & AI Data</p>
+</header>
 
-<a class="btn" href="#services">Services</a>
-<a class="btn" href="#contact">Contact</a>
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides" id="slides">
 
-</div>
-</div>
+<!-- 1 WEBSITE DEV -->
+<div class="slide">
+<div class="grid">
 
-<!-- SERVICES -->
-<div class="grid" id="services">
+<div>
+<h2>🌐 Website Development</h2>
+<p>
+I build modern, responsive websites for businesses, portfolios, and online brands.
+</p>
 
-<!-- WEBSITE -->
-<div class="card">
-<h3>🌐 Website Development</h3>
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
-<p>I build modern business websites and landing pages.</p>
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+
+<a class="btn" href="#contact">Order Website</a>
 </div>
 
-<!-- WHATSAPP -->
-<div class="card">
-<h3>💬 WhatsApp Bots</h3>
-<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80">
-<p>Automation bots for messaging and business workflows.</p>
+<div>
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+
+<!-- REALISTIC WEB DEV VIDEO -->
+<video controls>
+<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+<!-- 2 WHATSAPP BOTS -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>💬 WhatsApp Bots</h2>
+<p>
+I create automation bots that reply automatically, handle orders, and manage customers.
+</p>
+
+<span class="tag">Automation</span>
 <span class="tag">Node.js</span>
+
+<a class="btn" href="#contact">Order Bot</a>
 </div>
 
-<!-- MARKETING -->
-<div class="card">
-<h3>📣 Digital Marketing</h3>
-<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=80">
-<p>Grow business using ads, SEO and social media.</p>
+<div>
+<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80">
+
+<!-- CHAT AUTOMATION VIDEO -->
+<video controls>
+<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+<!-- 3 DIGITAL MARKETING -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>📣 Digital Marketing</h2>
+<p>
+I help businesses grow using ads, SEO, and social media campaigns.
+</p>
+
 <span class="tag">SEO</span>
+<span class="tag">Ads</span>
+<span class="tag">Growth</span>
+
+<a class="btn" href="#contact">Start Marketing</a>
 </div>
 
-<!-- DATA ANNOTATION -->
-<div class="card">
-<h3>📊 Data Annotation (CVAT)</h3>
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
-<p>Label images and videos for AI training systems.</p>
+<div>
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=80">
+
+<!-- MARKETING ANALYTICS VIDEO -->
+<video controls>
+<source src="https://cdn.pixabay.com/video/2023/05/08/159497-826234876_large.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+<!-- 4 DATA ANNOTATION -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>📊 Data Annotation (CVAT)</h2>
+<p>
+I label images and videos for AI training using tools like CVAT.
+</p>
+
 <span class="tag">AI Training</span>
+<span class="tag">Labeling</span>
+
+<a class="btn" href="#contact">Order Dataset</a>
 </div>
 
+<div>
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
+
+<!-- CVAT / IMAGE LABELING VIDEO -->
+<video controls>
+<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+<button onclick="prev()">⬅ Prev</button>
+<button onclick="next()">Next ➡</button>
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="grid">
-
-<div class="card">
+<section id="contact" style="text-align:center; padding:40px;">
 <h2>Contact Me</h2>
+
 <p>📧 nyabedaisaac@gmail.com</p>
 <p>📱 254706180760</p>
 
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20services">
+<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20service">
 WhatsApp Me
 </a>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 Santos Tech | AI & Digital Services
-</footer>
+</section>
 
 <script>
-let music = document.getElementById("bgmusic");
+let index = 0;
 
-function toggleMusic(){
-if(music.paused){
-music.play();
-}else{
-music.pause();
-}
+function show(){
+document.getElementById("slides").style.transform =
+`translateX(${-index * 100}%)`;
 }
 
-/* try autoplay (browser may block it) */
-window.addEventListener("load", ()=>{
-music.volume = 0.5;
-music.play().catch(()=>{});
-});
+function next(){
+index = (index + 1) % 4;
+show();
+}
+
+function prev(){
+index = (index - 1 + 4) % 4;
+show();
+}
 </script>
 
 </body>
