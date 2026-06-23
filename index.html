@@ -1,314 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | Enterprise AI System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Santos Tech | AI Solutions & Digital Systems</title>
+
+<meta name="description" content="Santos Tech builds AI systems, websites, automation bots, and digital marketing solutions for businesses.">
+<meta name="keywords" content="AI systems, website development, WhatsApp bots, digital marketing Kenya">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-margin:0;
-font-family:Arial;
-background:#050914;
-color:white;
+font-family: 'Segoe UI', sans-serif;
+background:#020617;
+color:#e2e8f0;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(2,6,23,0.85);
+backdrop-filter:blur(10px);
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+z-index:1000;
+}
+
+.navbar a{
+color:#38bdf8;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
 }
 
 /* HERO */
 .hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:70px 20px;
-background:url("https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80");
+background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80");
 background-size:cover;
-background-position:center;
 }
 
-.overlay{
-background:rgba(0,0,0,0.75);
-padding:40px;
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
 }
 
-h1{
-font-size:55px;
-margin:0;
+.hero p{
+color:#94a3b8;
+margin-bottom:20px;
 }
 
-p{
-color:#cbd5e1;
-}
-
-/* BUTTON */
 .btn{
-display:inline-block;
-padding:12px 18px;
-margin:10px;
+padding:12px 20px;
 background:#38bdf8;
 color:black;
-border-radius:10px;
+border-radius:8px;
 text-decoration:none;
+margin:5px;
+display:inline-block;
 font-weight:bold;
-cursor:pointer;
 }
 
-/* SLIDER */
-.slider{
+/* SECTION */
+section{
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
-overflow:hidden;
-border-radius:15px;
 }
 
-.slides{
-display:flex;
-transition:transform 0.6s ease-in-out;
-}
-
-.slide{
-min-width:100%;
-padding:25px;
-background:#111827;
-}
-
-/* GRID */
-.grid{
+/* SERVICES */
+.services{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-img, video{
+.card{
+background:#0f172a;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(56,189,248,0.2);
+}
+
+.card img{
 width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+/* VIDEO */
+.video{
+margin-top:20px;
 border-radius:12px;
-}
-
-.tag{
-display:inline-block;
-padding:5px 10px;
-background:#1f2937;
-border-radius:20px;
-font-size:12px;
-margin:3px;
-color:#93c5fd;
-}
-
-/* NAV */
-.nav{
-text-align:center;
-margin:10px;
-}
-
-.nav button{
-padding:10px 15px;
-border:none;
-border-radius:8px;
-background:#1f2937;
-color:white;
-cursor:pointer;
-}
-
-/* CHATBOT */
-.chatbot{
-position:fixed;
-bottom:20px;
-right:20px;
-width:260px;
-background:#111827;
-border:1px solid #38bdf8;
-border-radius:12px;
-padding:10px;
-}
-
-.chatmsg{
-font-size:12px;
-margin:5px 0;
-color:#cbd5e1;
+overflow:hidden;
 }
 
 /* DASHBOARD */
 .dashboard{
-background:#0b1220;
-padding:20px;
-border-radius:12px;
-margin-top:20px;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-/* MPESA BOX */
-.mpesa{
 background:#0f172a;
 padding:20px;
 border-radius:12px;
-border:1px solid #38bdf8;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+text-align:center;
+}
+
+.stat{
+background:#020617;
+padding:15px;
+border-radius:10px;
+}
+
+/* FAQ */
+.faq{
+margin-top:20px;
+}
+
+.faq details{
+margin:10px 0;
+background:#0f172a;
+padding:10px;
+border-radius:8px;
+}
+
+/* CONTACT */
+.contact a{
+display:inline-block;
+margin-top:10px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-opacity:0.6;
+opacity:0.5;
 }
 
 /* MOBILE */
-@media(max-width:800px){
-.grid{
-grid-template-columns:1fr;
-}
+@media(max-width:600px){
+.hero h1{font-size:40px;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<div class="navbar">
+<div><b>Santos Tech</b></div>
+<div>
+<a href="#services">Services</a>
+<a href="#dashboard">Stats</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
-<div class="overlay">
-
-<h1>Santos Tech 🚀</h1>
-<p>Enterprise AI System | Websites | Bots | Marketing | Data Annotation</p>
-
-<a class="btn" href="#services">Services</a>
-<a class="btn" href="#dashboard">Dashboard</a>
-<a class="btn" href="#payment">Order</a>
-
-</div>
-</div>
-
-<!-- SLIDER -->
-<div class="slider">
-<div class="slides" id="slides">
-
-<!-- WEBSITE -->
-<div class="slide">
-<div class="grid">
 <div>
-<h2>🌐 Website Development</h2>
-<p>Modern business websites and landing pages.</p>
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
-<video controls>
-<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4">
-</video>
-</div>
+<h1>AI Systems That Grow Your Business 🚀</h1>
+<p>Websites • Bots • Automation • Marketing • Data AI</p>
+<a href="#services" class="btn">Explore Services</a>
+<a href="#contact" class="btn">Contact Now</a>
 </div>
 </div>
 
-<!-- WHATSAPP -->
-<div class="slide">
-<div class="grid">
-<div>
-<h2>💬 WhatsApp Bots</h2>
-<p>Automated messaging systems and replies.</p>
-<span class="tag">Automation</span>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf">
-<video controls>
-<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4">
-</video>
-</div>
-</div>
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>🌐 Website Development</h3>
+<p>Modern fast websites & landing pages.</p>
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 </div>
 
-<!-- MARKETING -->
-<div class="slide">
-<div class="grid">
-<div>
-<h2>📣 Digital Marketing</h2>
-<p>Ads, SEO, social media growth systems.</p>
-<span class="tag">SEO</span>
+<div class="card">
+<h3>💬 WhatsApp Bots</h3>
+<p>Automated replies & business chat systems.</p>
+<img src="https://images.unsplash.com/photo-1587614382346-acb2d9b9c75c">
 </div>
-<div>
+
+<div class="card">
+<h3>📣 Digital Marketing</h3>
+<p>SEO, Ads & social growth strategies.</p>
 <img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
-<video controls>
+</div>
+
+<div class="card">
+<h3>📊 Data Annotation</h3>
+<p>AI training datasets & labeling.</p>
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
+</div>
+
+</div>
+
+<!-- VIDEO -->
+<div class="video">
+<video autoplay muted loop controls>
 <source src="https://cdn.pixabay.com/video/2023/05/08/159497-826234876_large.mp4">
 </video>
 </div>
-</div>
-</div>
 
-<!-- DATA -->
-<div class="slide">
-<div class="grid">
-<div>
-<h2>📊 Data Annotation (CVAT)</h2>
-<p>AI training data labeling and bounding boxes.</p>
-<span class="tag">AI</span>
-</div>
-<div>
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-<video controls>
-<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4">
-</video>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- NAV -->
-<div class="nav">
-<button onclick="prev()">⬅ Prev</button>
-<button onclick="next()">Next ➡</button>
-</div>
-
-<!-- PAYMENT SYSTEM UI -->
-<section id="payment">
-<h2>💰 Order System (M-Pesa Style)</h2>
-
-<div class="mpesa">
-<p>Send payment to: <b>254706180760</b></p>
-<p>Then confirm on WhatsApp</p>
-
-<a class="btn" href="https://wa.me/254706180760?text=I%20just%20paid%20for%20a%20service">
-Confirm Payment
-</a>
-</div>
 </section>
 
 <!-- DASHBOARD -->
 <section id="dashboard">
-<h2>📊 Admin Dashboard</h2>
+<h2>Business Stats</h2>
 
 <div class="dashboard">
-<p>✔ Orders: 12</p>
-<p>✔ Active Clients: 5</p>
-<p>✔ Revenue: KSh 1,200+</p>
-<p>✔ Services Running: 4</p>
+<div class="stat"><h3>12+</h3><p>Orders</p></div>
+<div class="stat"><h3>5+</h3><p>Clients</p></div>
+<div class="stat"><h3>KSh 1,200+</h3><p>Revenue</p></div>
+<div class="stat"><h3>4</h3><p>Services</p></div>
 </div>
+
 </section>
 
-<!-- CHATBOT -->
-<div class="chatbot">
-<div class="chatmsg">🤖 Santos AI Assistant</div>
-<div class="chatmsg">Ask about services</div>
-<div class="chatmsg">Use WhatsApp for real chat</div>
+<!-- FAQ -->
+<section>
+<h2>FAQ</h2>
+
+<div class="faq">
+<details>
+<summary>How fast do you deliver?</summary>
+<p>1–3 days depending on project size.</p>
+</details>
+
+<details>
+<summary>Do you support businesses?</summary>
+<p>Yes, we build scalable systems for startups & enterprises.</p>
+</details>
+
 </div>
 
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact & Orders</h2>
+
+<div class="contact">
+<p>Send payment via M-Pesa:</p>
+<b>254706180760</b>
+
+<br><br>
+
+<a class="btn" href="https://wa.me/254706180760?text=Hello%20I%20want%20your%20service">
+Chat on WhatsApp
+</a>
+</div>
+
+</section>
+
 <footer>
-© 2026 Santos Tech | Enterprise AI System
+© 2026 Santos Tech | AI Systems
 </footer>
-
-<script>
-let index = 0;
-
-function show(){
-document.getElementById("slides").style.transform =
-`translateX(${-index * 100}%)`;
-}
-
-function next(){
-index = (index + 1) % 4;
-show();
-}
-
-function prev(){
-index = (index - 1 + 4) % 4;
-show();
-}
-</script>
 
 </body>
 </html>
