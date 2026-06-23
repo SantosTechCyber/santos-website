@@ -3,74 +3,47 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | Services Slider</title>
+<title>Santos Tech | AI & Data Annotation</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0b1220;
 color:white;
+
+/* COMPUTER / AI BACKGROUND */
+background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
-/* HEADER */
-header{
+/* DARK OVERLAY */
+.overlay{
+background:rgba(0,0,0,0.78);
+min-height:100vh;
+padding:20px;
+}
+
+/* HERO */
+.hero{
 text-align:center;
-padding:60px 20px;
-background: radial-gradient(circle at top, #1e3a8a, #0b1220);
+padding:70px 20px;
 }
 
-h1{
-font-size:50px;
-margin:0;
+.hero h1{
+font-size:55px;
 }
 
-p{
+.hero p{
 color:#cbd5e1;
 }
 
-/* SLIDER */
-.slider{
-position:relative;
-max-width:1100px;
-margin:auto;
-overflow:hidden;
-border-radius:15px;
-}
-
-.slides{
-display:flex;
-transition:transform 0.5s ease-in-out;
-}
-
-.slide{
-min-width:100%;
-box-sizing:border-box;
-padding:30px;
-background:#111827;
-}
-
-/* CONTENT */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-align-items:center;
-}
-
-img, video{
-width:100%;
-border-radius:12px;
-}
-
-h2{
-color:#38bdf8;
-}
-
+/* BUTTON */
 .btn{
 display:inline-block;
-margin:10px;
 padding:12px 18px;
+margin:10px;
 background:#38bdf8;
 color:black;
 border-radius:10px;
@@ -78,189 +51,171 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* NAV BUTTONS */
-.nav{
-text-align:center;
-margin-top:15px;
+/* SECTIONS */
+section{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
 }
 
-.nav button{
-padding:10px 15px;
-margin:5px;
-border:none;
-border-radius:8px;
-cursor:pointer;
+h2{
+color:#38bdf8;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:rgba(17,24,39,0.85);
+border-radius:15px;
+padding:15px;
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+}
+
+img, video{
+width:100%;
+border-radius:12px;
+}
+
+/* TAG */
+.tag{
+display:inline-block;
+padding:5px 10px;
 background:#1f2937;
-color:white;
+border-radius:20px;
+font-size:12px;
+margin:3px;
+color:#93c5fd;
 }
 
-.nav button:hover{
-background:#38bdf8;
-color:black;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-padding:40px;
-}
-
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-opacity:0.6;
+opacity:0.7;
 }
 
-/* MOBILE */
-@media(max-width:800px){
-.grid{
-grid-template-columns:1fr;
-}
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="overlay">
+
+<!-- HERO -->
+<div class="hero">
 <h1>Santos Tech 🚀</h1>
-<p>I teach and build digital solutions: Websites, Bots, Marketing & Data Annotation</p>
-</header>
+<p>I specialize in Data Annotation, CVAT labeling, AI training data & automation systems</p>
 
-<!-- SLIDER -->
-<div class="slider">
+<a class="btn" href="#annotation">Data Annotation</a>
+<a class="btn" href="#cvat">CVAT Demo</a>
+<a class="btn" href="#contact">Contact Me</a>
+</div>
 
-<div class="slides" id="slides">
+<!-- SERVICES -->
+<section>
+<h2>My Services</h2>
 
-<!-- SLIDE 1: WEBSITE -->
-<div class="slide">
 <div class="grid">
 
-<div>
-<h2>🌐 Website Development</h2>
+<div class="card">
+<h3>🌐 Website Development</h3>
+<p>I build modern websites for businesses and startups.</p>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+</div>
+
+<div class="card">
+<h3>💬 WhatsApp Bots</h3>
+<p>I create automation bots for messaging and business workflows.</p>
+<span class="tag">Node.js</span>
+<span class="tag">API</span>
+</div>
+
+<div class="card">
+<h3>📣 Digital Marketing</h3>
+<p>I help businesses grow online using ads and SEO.</p>
+<span class="tag">SEO</span>
+<span class="tag">Ads</span>
+</div>
+
+<div class="card">
+<h3>📊 Data Annotation</h3>
+<p>Labeling data for AI systems (images, text, objects).</p>
+<span class="tag">AI Training</span>
+<span class="tag">Labeling</span>
+</div>
+
+</div>
+</section>
+
+<!-- DATA ANNOTATION EXPLANATION -->
+<section id="annotation">
+<h2>📊 What is Data Annotation?</h2>
+
+<div class="card">
 <p>
-I create modern websites for businesses, portfolios, and online stores.
-You learn how websites are built using HTML, CSS, and JavaScript.
+Data annotation is the process of labeling images, text, or videos so AI models can learn from them.
+For example, marking cars, people, or objects in images.
 </p>
 
-<a class="btn" href="#contact">Order Website</a>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31?auto=format&fit=crop&w=1200&q=80">
 </div>
+</section>
 
-<div>
-<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
-</div>
+<!-- CVAT DEMO -->
+<section id="cvat">
+<h2>🧠 CVAT Image Annotation Demo</h2>
 
-</div>
-</div>
-
-<!-- SLIDE 2: WHATSAPP BOT -->
-<div class="slide">
 <div class="grid">
 
-<div>
-<h2>💬 WhatsApp Bots</h2>
-<p>
-I build bots that automatically reply to messages, send notifications,
-and help businesses manage customers.
-</p>
+<div class="card">
+<h3>Image Annotation Example</h3>
+<p>Drawing boxes around objects in images using CVAT tool.</p>
 
-<a class="btn" href="#contact">Order Bot</a>
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
 </div>
 
-<div>
+<div class="card">
+<h3>CVAT Workflow Video</h3>
+<p>How AI annotation tools work in real projects.</p>
+
 <video controls>
 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
 </video>
 </div>
 
 </div>
-</div>
-
-<!-- SLIDE 3: DIGITAL MARKETING -->
-<div class="slide">
-<div class="grid">
-
-<div>
-<h2>📣 Digital Marketing</h2>
-<p>
-I help businesses grow online using ads, social media, and SEO strategies
-to reach more customers.
-</p>
-
-<a class="btn" href="#contact">Start Marketing</a>
-</div>
-
-<div>
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31">
-</div>
-
-</div>
-</div>
-
-<!-- SLIDE 4: DATA ANNOTATION -->
-<div class="slide">
-<div class="grid">
-
-<div>
-<h2>📊 Data Annotation</h2>
-<p>
-I label images, text, and data so AI systems can learn.
-Example: marking objects in images or tagging data for machine learning.
-</p>
-
-<a class="btn" href="#contact">Learn / Order</a>
-</div>
-
-<div>
-<video controls>
-<source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-</video>
-</div>
-
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- SLIDER BUTTONS -->
-<div class="nav">
-<button onclick="prev()">⬅ Prev</button>
-<button onclick="next()">Next ➡</button>
-</div>
+</section>
 
 <!-- CONTACT -->
-<div class="contact" id="contact">
+<section id="contact">
 <h2>Contact Me</h2>
-<p>📧 nyabedaisaac@gmail.com</p>
-<p>📱 254706180760</p>
 
-<a class="btn" href="mailto:nyabedaisaac@gmail.com">Email Me</a>
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20service">WhatsApp Me</a>
+<div class="card">
+📧 Email: <b>nyabedaisaac@gmail.com</b><br>
+📱 WhatsApp: <b>254706180760</b>
 </div>
 
+<a class="btn" href="mailto:nyabedaisaac@gmail.com">Email Me</a>
+
+<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20data%20annotation%20service">
+WhatsApp Me
+</a>
+
+</section>
+
 <footer>
-© 2026 Santos Tech | Built with GitHub Pages
+© 2026 Santos Tech | AI Data Annotation Specialist
 </footer>
 
-<script>
-let index = 0;
-
-function showSlide(){
-document.getElementById("slides").style.transform =
-`translateX(${-index * 100}%)`;
-}
-
-function next(){
-index = (index + 1) % 4;
-showSlide();
-}
-
-function prev(){
-index = (index - 1 + 4) % 4;
-showSlide();
-}
-</script>
+</div>
 
 </body>
 </html>
