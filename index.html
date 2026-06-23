@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | Services</title>
+<title>Santos Tech | Digital Services</title>
 
 <style>
 body{
@@ -16,28 +16,34 @@ color:white;
 /* HERO */
 .hero{
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
 background: radial-gradient(circle at top, #1e3a8a, #0b1220);
 }
 
 .hero h1{
-font-size:50px;
+font-size:55px;
+margin:0;
 }
 
 .hero p{
 color:#cbd5e1;
+font-size:18px;
 }
 
-/* BUTTON */
 .btn{
 display:inline-block;
-padding:12px 18px;
 margin:10px;
+padding:12px 18px;
 background:#38bdf8;
 color:black;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
 }
 
 /* SECTION */
@@ -58,13 +64,13 @@ grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
 }
 
-/* CARD (LIKE YOUR IMAGE) */
+/* CARD */
 .card{
 background:#111827;
 border-radius:15px;
 overflow:hidden;
-transition:0.3s;
 border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
 }
 
 .card:hover{
@@ -74,11 +80,11 @@ transform:translateY(-8px);
 /* IMAGE */
 .card img{
 width:100%;
-height:200px;
+height:220px;
 object-fit:cover;
 }
 
-/* TEXT AREA */
+/* CONTENT */
 .content{
 padding:15px;
 }
@@ -97,7 +103,11 @@ margin:3px;
 color:#93c5fd;
 }
 
-/* FOOTER */
+/* CONTACT */
+.contact{
+text-align:center;
+}
+
 footer{
 text-align:center;
 padding:20px;
@@ -108,12 +118,13 @@ opacity:0.6;
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Santos Tech 🚀</h1>
-<p>We build WhatsApp Bots, Websites & Digital Solutions</p>
+<p>We build Websites, WhatsApp Bots, Digital Marketing Systems & Automation Tools</p>
 
-<a class="btn" href="#services">Explore Services</a>
-<a class="btn" href="#contact">Contact</a>
+<a class="btn" href="#services">View Services</a>
+<a class="btn" href="#contact">Contact Me</a>
 </div>
 
 <!-- SERVICES -->
@@ -122,43 +133,40 @@ opacity:0.6;
 
 <div class="grid">
 
-<!-- CARD 1 -->
+<!-- WEBSITE -->
 <div class="card">
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-<div class="content">
-<h3>💬 WhatsApp Bots</h3>
-<p>Automate messages, replies, and business workflows.</p>
-
-<div class="tags">
-<span class="tag">Node.js</span>
-<span class="tag">Automation</span>
-<span class="tag">API</span>
-</div>
-</div>
-</div>
-
-<!-- CARD 2 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
+<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
 <div class="content">
 <h3>🌐 Website Development</h3>
-<p>Modern responsive websites for businesses & brands.</p>
-
+<p>Modern business websites, landing pages and portfolios.</p>
 <div class="tags">
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
-<span class="tag">React</span>
+<span class="tag">JavaScript</span>
 </div>
 </div>
 </div>
 
-<!-- CARD 3 -->
+<!-- WHATSAPP BOT -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf">
+<div class="content">
+<h3>💬 WhatsApp Bots</h3>
+<p>Automated messaging systems for businesses and clients.</p>
+<div class="tags">
+<span class="tag">Node.js</span>
+<span class="tag">API</span>
+<span class="tag">Automation</span>
+</div>
+</div>
+</div>
+
+<!-- DIGITAL MARKETING -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31">
 <div class="content">
-<h3>📊 Digital Marketing</h3>
-<p>Grow your online presence and reach more customers.</p>
-
+<h3>📣 Digital Marketing</h3>
+<p>Grow your brand, reach more customers and increase sales.</p>
 <div class="tags">
 <span class="tag">SEO</span>
 <span class="tag">Ads</span>
@@ -167,16 +175,15 @@ opacity:0.6;
 </div>
 </div>
 
-<!-- CARD 4 -->
+<!-- DATA SERVICES -->
 <div class="card">
 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 <div class="content">
-<h3>📁 Data Services</h3>
-<p>Data entry, annotation and structured datasets.</p>
-
+<h3>📊 Data Services</h3>
+<p>Data entry, annotation and AI training datasets.</p>
 <div class="tags">
-<span class="tag">AI Data</span>
 <span class="tag">Excel</span>
+<span class="tag">AI Data</span>
 <span class="tag">Labeling</span>
 </div>
 </div>
@@ -187,21 +194,25 @@ opacity:0.6;
 
 <!-- ABOUT -->
 <section>
-<h2>What We Do</h2>
+<h2>About Me</h2>
 <p>
-We help businesses go digital by building automation tools, websites,
-and smart online systems that increase sales and efficiency.
+I am a digital freelancer providing modern tech solutions including website development,
+WhatsApp automation, digital marketing, and data services.
 </p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
 
-<p>📧 Email: nyabedaisaac@gmail.com</p>
-<p>📱 WhatsApp: 254706180760</p>
+<p>📧 Email: <b>nyabedaisaac@gmail.com</b></p>
+<p>📱 WhatsApp: <b>254706180760</b></p>
 
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20service">Message Me</a>
+<a class="btn" href="mailto:nyabedaisaac@gmail.com">Send Email</a>
+
+<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20services">
+WhatsApp Me
+</a>
 </section>
 
 <footer>
