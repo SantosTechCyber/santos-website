@@ -3,30 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | Professional Services</title>
+<title>Santos Tech | Enterprise AI System</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0b1220;
+background:#050914;
 color:white;
 }
 
-/* HEADER */
-header{
+/* HERO */
+.hero{
 text-align:center;
-padding:60px 20px;
-background: radial-gradient(circle at top, #1e3a8a, #0b1220);
+padding:70px 20px;
+background:url("https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.overlay{
+background:rgba(0,0,0,0.75);
+padding:40px;
 }
 
 h1{
-font-size:52px;
+font-size:55px;
 margin:0;
 }
 
 p{
 color:#cbd5e1;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+padding:12px 18px;
+margin:10px;
+background:#38bdf8;
+color:black;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
 }
 
 /* SLIDER */
@@ -46,7 +66,6 @@ transition:transform 0.6s ease-in-out;
 min-width:100%;
 padding:25px;
 background:#111827;
-box-sizing:border-box;
 }
 
 /* GRID */
@@ -54,7 +73,6 @@ box-sizing:border-box;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:20px;
-align-items:center;
 }
 
 img, video{
@@ -62,40 +80,6 @@ width:100%;
 border-radius:12px;
 }
 
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:12px 18px;
-margin-top:10px;
-background:#38bdf8;
-color:black;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* NAV */
-.nav{
-text-align:center;
-margin:15px;
-}
-
-.nav button{
-padding:10px 15px;
-margin:5px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-background:#1f2937;
-color:white;
-}
-
-.nav button:hover{
-background:#38bdf8;
-color:black;
-}
-
-/* TAGS */
 .tag{
 display:inline-block;
 padding:5px 10px;
@@ -104,6 +88,63 @@ border-radius:20px;
 font-size:12px;
 margin:3px;
 color:#93c5fd;
+}
+
+/* NAV */
+.nav{
+text-align:center;
+margin:10px;
+}
+
+.nav button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#1f2937;
+color:white;
+cursor:pointer;
+}
+
+/* CHATBOT */
+.chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+width:260px;
+background:#111827;
+border:1px solid #38bdf8;
+border-radius:12px;
+padding:10px;
+}
+
+.chatmsg{
+font-size:12px;
+margin:5px 0;
+color:#cbd5e1;
+}
+
+/* DASHBOARD */
+.dashboard{
+background:#0b1220;
+padding:20px;
+border-radius:12px;
+margin-top:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* MPESA BOX */
+.mpesa{
+background:#0f172a;
+padding:20px;
+border-radius:12px;
+border:1px solid #38bdf8;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+opacity:0.6;
 }
 
 /* MOBILE */
@@ -117,126 +158,90 @@ grid-template-columns:1fr;
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
+<div class="overlay">
+
 <h1>Santos Tech 🚀</h1>
-<p>Professional Digital Services — Websites, Bots, Marketing & AI Data</p>
-</header>
+<p>Enterprise AI System | Websites | Bots | Marketing | Data Annotation</p>
+
+<a class="btn" href="#services">Services</a>
+<a class="btn" href="#dashboard">Dashboard</a>
+<a class="btn" href="#payment">Order</a>
+
+</div>
+</div>
 
 <!-- SLIDER -->
 <div class="slider">
 <div class="slides" id="slides">
 
-<!-- 1 WEBSITE DEV -->
+<!-- WEBSITE -->
 <div class="slide">
 <div class="grid">
-
 <div>
 <h2>🌐 Website Development</h2>
-<p>
-I build modern, responsive websites for businesses, portfolios, and online brands.
-</p>
-
+<p>Modern business websites and landing pages.</p>
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
-<span class="tag">JavaScript</span>
-
-<a class="btn" href="#contact">Order Website</a>
 </div>
-
 <div>
 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
-
-<!-- REALISTIC WEB DEV VIDEO -->
 <video controls>
-<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4" type="video/mp4">
+<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4">
 </video>
 </div>
-
 </div>
 </div>
 
-<!-- 2 WHATSAPP BOTS -->
+<!-- WHATSAPP -->
 <div class="slide">
 <div class="grid">
-
 <div>
 <h2>💬 WhatsApp Bots</h2>
-<p>
-I create automation bots that reply automatically, handle orders, and manage customers.
-</p>
-
+<p>Automated messaging systems and replies.</p>
 <span class="tag">Automation</span>
-<span class="tag">Node.js</span>
-
-<a class="btn" href="#contact">Order Bot</a>
 </div>
-
 <div>
-<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80">
-
-<!-- CHAT AUTOMATION VIDEO -->
+<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf">
 <video controls>
-<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4" type="video/mp4">
+<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4">
 </video>
 </div>
-
 </div>
 </div>
 
-<!-- 3 DIGITAL MARKETING -->
+<!-- MARKETING -->
 <div class="slide">
 <div class="grid">
-
 <div>
 <h2>📣 Digital Marketing</h2>
-<p>
-I help businesses grow using ads, SEO, and social media campaigns.
-</p>
-
+<p>Ads, SEO, social media growth systems.</p>
 <span class="tag">SEO</span>
-<span class="tag">Ads</span>
-<span class="tag">Growth</span>
-
-<a class="btn" href="#contact">Start Marketing</a>
 </div>
-
 <div>
-<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=80">
-
-<!-- MARKETING ANALYTICS VIDEO -->
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
 <video controls>
-<source src="https://cdn.pixabay.com/video/2023/05/08/159497-826234876_large.mp4" type="video/mp4">
+<source src="https://cdn.pixabay.com/video/2023/05/08/159497-826234876_large.mp4">
 </video>
 </div>
-
 </div>
 </div>
 
-<!-- 4 DATA ANNOTATION -->
+<!-- DATA -->
 <div class="slide">
 <div class="grid">
-
 <div>
 <h2>📊 Data Annotation (CVAT)</h2>
-<p>
-I label images and videos for AI training using tools like CVAT.
-</p>
-
-<span class="tag">AI Training</span>
-<span class="tag">Labeling</span>
-
-<a class="btn" href="#contact">Order Dataset</a>
+<p>AI training data labeling and bounding boxes.</p>
+<span class="tag">AI</span>
 </div>
-
 <div>
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
-
-<!-- CVAT / IMAGE LABELING VIDEO -->
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
 <video controls>
-<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4" type="video/mp4">
+<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4">
 </video>
 </div>
-
 </div>
 </div>
 
@@ -249,17 +254,42 @@ I label images and videos for AI training using tools like CVAT.
 <button onclick="next()">Next ➡</button>
 </div>
 
-<!-- CONTACT -->
-<section id="contact" style="text-align:center; padding:40px;">
-<h2>Contact Me</h2>
+<!-- PAYMENT SYSTEM UI -->
+<section id="payment">
+<h2>💰 Order System (M-Pesa Style)</h2>
 
-<p>📧 nyabedaisaac@gmail.com</p>
-<p>📱 254706180760</p>
+<div class="mpesa">
+<p>Send payment to: <b>254706180760</b></p>
+<p>Then confirm on WhatsApp</p>
 
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20service">
-WhatsApp Me
+<a class="btn" href="https://wa.me/254706180760?text=I%20just%20paid%20for%20a%20service">
+Confirm Payment
 </a>
+</div>
 </section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+<h2>📊 Admin Dashboard</h2>
+
+<div class="dashboard">
+<p>✔ Orders: 12</p>
+<p>✔ Active Clients: 5</p>
+<p>✔ Revenue: KSh 1,200+</p>
+<p>✔ Services Running: 4</p>
+</div>
+</section>
+
+<!-- CHATBOT -->
+<div class="chatbot">
+<div class="chatmsg">🤖 Santos AI Assistant</div>
+<div class="chatmsg">Ask about services</div>
+<div class="chatmsg">Use WhatsApp for real chat</div>
+</div>
+
+<footer>
+© 2026 Santos Tech | Enterprise AI System
+</footer>
 
 <script>
 let index = 0;
