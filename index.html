@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | Digital Services</title>
+<title>Santos Tech | Services Slider</title>
 
 <style>
 body{
@@ -13,21 +13,58 @@ background:#0b1220;
 color:white;
 }
 
-/* HERO */
-.hero{
+/* HEADER */
+header{
 text-align:center;
-padding:80px 20px;
+padding:60px 20px;
 background: radial-gradient(circle at top, #1e3a8a, #0b1220);
 }
 
-.hero h1{
-font-size:55px;
+h1{
+font-size:50px;
 margin:0;
 }
 
-.hero p{
+p{
 color:#cbd5e1;
-font-size:18px;
+}
+
+/* SLIDER */
+.slider{
+position:relative;
+max-width:1100px;
+margin:auto;
+overflow:hidden;
+border-radius:15px;
+}
+
+.slides{
+display:flex;
+transition:transform 0.5s ease-in-out;
+}
+
+.slide{
+min-width:100%;
+box-sizing:border-box;
+padding:30px;
+background:#111827;
+}
+
+/* CONTENT */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+align-items:center;
+}
+
+img, video{
+width:100%;
+border-radius:12px;
+}
+
+h2{
+color:#38bdf8;
 }
 
 .btn{
@@ -39,73 +76,33 @@ color:black;
 border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.08);
+/* NAV BUTTONS */
+.nav{
+text-align:center;
+margin-top:15px;
 }
 
-/* SECTION */
-section{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
-}
-
-h2{
-color:#38bdf8;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-/* CARD */
-.card{
-background:#111827;
-border-radius:15px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-/* IMAGE */
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-/* CONTENT */
-.content{
-padding:15px;
-}
-
-.tags{
-margin-top:10px;
-}
-
-.tag{
-display:inline-block;
-padding:5px 10px;
+.nav button{
+padding:10px 15px;
+margin:5px;
+border:none;
+border-radius:8px;
+cursor:pointer;
 background:#1f2937;
-border-radius:20px;
-font-size:12px;
-margin:3px;
-color:#93c5fd;
+color:white;
+}
+
+.nav button:hover{
+background:#38bdf8;
+color:black;
 }
 
 /* CONTACT */
 .contact{
 text-align:center;
+padding:40px;
 }
 
 footer{
@@ -113,111 +110,157 @@ text-align:center;
 padding:20px;
 opacity:0.6;
 }
+
+/* MOBILE */
+@media(max-width:800px){
+.grid{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<header>
 <h1>Santos Tech 🚀</h1>
-<p>We build Websites, WhatsApp Bots, Digital Marketing Systems & Automation Tools</p>
+<p>I teach and build digital solutions: Websites, Bots, Marketing & Data Annotation</p>
+</header>
 
-<a class="btn" href="#services">View Services</a>
-<a class="btn" href="#contact">Contact Me</a>
-</div>
+<!-- SLIDER -->
+<div class="slider">
 
-<!-- SERVICES -->
-<section id="services">
-<h2>Our Services</h2>
+<div class="slides" id="slides">
 
+<!-- SLIDE 1: WEBSITE -->
+<div class="slide">
 <div class="grid">
 
-<!-- WEBSITE -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
-<div class="content">
-<h3>🌐 Website Development</h3>
-<p>Modern business websites, landing pages and portfolios.</p>
-<div class="tags">
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<span class="tag">JavaScript</span>
-</div>
-</div>
-</div>
-
-<!-- WHATSAPP BOT -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf">
-<div class="content">
-<h3>💬 WhatsApp Bots</h3>
-<p>Automated messaging systems for businesses and clients.</p>
-<div class="tags">
-<span class="tag">Node.js</span>
-<span class="tag">API</span>
-<span class="tag">Automation</span>
-</div>
-</div>
-</div>
-
-<!-- DIGITAL MARKETING -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31">
-<div class="content">
-<h3>📣 Digital Marketing</h3>
-<p>Grow your brand, reach more customers and increase sales.</p>
-<div class="tags">
-<span class="tag">SEO</span>
-<span class="tag">Ads</span>
-<span class="tag">Social Media</span>
-</div>
-</div>
-</div>
-
-<!-- DATA SERVICES -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
-<div class="content">
-<h3>📊 Data Services</h3>
-<p>Data entry, annotation and AI training datasets.</p>
-<div class="tags">
-<span class="tag">Excel</span>
-<span class="tag">AI Data</span>
-<span class="tag">Labeling</span>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-<section>
-<h2>About Me</h2>
+<div>
+<h2>🌐 Website Development</h2>
 <p>
-I am a digital freelancer providing modern tech solutions including website development,
-WhatsApp automation, digital marketing, and data services.
+I create modern websites for businesses, portfolios, and online stores.
+You learn how websites are built using HTML, CSS, and JavaScript.
 </p>
-</section>
+
+<a class="btn" href="#contact">Order Website</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
+</div>
+
+</div>
+</div>
+
+<!-- SLIDE 2: WHATSAPP BOT -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>💬 WhatsApp Bots</h2>
+<p>
+I build bots that automatically reply to messages, send notifications,
+and help businesses manage customers.
+</p>
+
+<a class="btn" href="#contact">Order Bot</a>
+</div>
+
+<div>
+<video controls>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+<!-- SLIDE 3: DIGITAL MARKETING -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>📣 Digital Marketing</h2>
+<p>
+I help businesses grow online using ads, social media, and SEO strategies
+to reach more customers.
+</p>
+
+<a class="btn" href="#contact">Start Marketing</a>
+</div>
+
+<div>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31">
+</div>
+
+</div>
+</div>
+
+<!-- SLIDE 4: DATA ANNOTATION -->
+<div class="slide">
+<div class="grid">
+
+<div>
+<h2>📊 Data Annotation</h2>
+<p>
+I label images, text, and data so AI systems can learn.
+Example: marking objects in images or tagging data for machine learning.
+</p>
+
+<a class="btn" href="#contact">Learn / Order</a>
+</div>
+
+<div>
+<video controls>
+<source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- SLIDER BUTTONS -->
+<div class="nav">
+<button onclick="prev()">⬅ Prev</button>
+<button onclick="next()">Next ➡</button>
+</div>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<div class="contact" id="contact">
 <h2>Contact Me</h2>
+<p>📧 nyabedaisaac@gmail.com</p>
+<p>📱 254706180760</p>
 
-<p>📧 Email: <b>nyabedaisaac@gmail.com</b></p>
-<p>📱 WhatsApp: <b>254706180760</b></p>
-
-<a class="btn" href="mailto:nyabedaisaac@gmail.com">Send Email</a>
-
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20services">
-WhatsApp Me
-</a>
-</section>
+<a class="btn" href="mailto:nyabedaisaac@gmail.com">Email Me</a>
+<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20service">WhatsApp Me</a>
+</div>
 
 <footer>
 © 2026 Santos Tech | Built with GitHub Pages
 </footer>
+
+<script>
+let index = 0;
+
+function showSlide(){
+document.getElementById("slides").style.transform =
+`translateX(${-index * 100}%)`;
+}
+
+function next(){
+index = (index + 1) % 4;
+showSlide();
+}
+
+function prev(){
+index = (index - 1 + 4) % 4;
+showSlide();
+}
+</script>
 
 </body>
 </html>
