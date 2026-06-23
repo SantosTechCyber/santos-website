@@ -3,39 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Santos Tech | AI & Data Annotation</title>
+<title>Santos Tech | AI & Digital Services</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
 color:white;
-
-/* COMPUTER / AI BACKGROUND */
-background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+background:#0a0f1c;
+overflow-x:hidden;
 }
 
-/* DARK OVERLAY */
+/* BACKGROUND IMAGE */
+.hero-bg{
+background:url("https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+padding:80px 20px;
+text-align:center;
+}
+
 .overlay{
-background:rgba(0,0,0,0.78);
-min-height:100vh;
+background:rgba(0,0,0,0.75);
 padding:20px;
 }
 
-/* HERO */
-.hero{
-text-align:center;
-padding:70px 20px;
-}
-
-.hero h1{
+/* TITLE */
+h1{
 font-size:55px;
+margin:0;
 }
 
-.hero p{
+p{
 color:#cbd5e1;
 }
 
@@ -51,31 +50,25 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTIONS */
-section{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
-}
-
-h2{
-color:#38bdf8;
-}
-
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
+padding:40px;
 }
 
 /* CARD */
 .card{
-background:rgba(17,24,39,0.85);
+background:#111827;
 border-radius:15px;
 padding:15px;
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter: blur(10px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
 }
 
 img, video{
@@ -83,7 +76,6 @@ width:100%;
 border-radius:12px;
 }
 
-/* TAG */
 .tag{
 display:inline-block;
 padding:5px 10px;
@@ -94,128 +86,128 @@ margin:3px;
 color:#93c5fd;
 }
 
+/* MUSIC BUTTON */
+.music-control{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#38bdf8;
+color:black;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-opacity:0.7;
+opacity:0.6;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="overlay">
+<!-- BACKGROUND MUSIC (YOU ADD FILE) -->
+<audio id="bgmusic" loop>
+  <source src="assets/whisper.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC BUTTON -->
+<div class="music-control" onclick="toggleMusic()">
+🎵 Music
+</div>
 
 <!-- HERO -->
-<div class="hero">
-<h1>Santos Tech 🚀</h1>
-<p>I specialize in Data Annotation, CVAT labeling, AI training data & automation systems</p>
+<div class="hero-bg">
+<div class="overlay">
 
-<a class="btn" href="#annotation">Data Annotation</a>
-<a class="btn" href="#cvat">CVAT Demo</a>
-<a class="btn" href="#contact">Contact Me</a>
+<h1>Santos Tech 🚀</h1>
+<p>I build Websites, WhatsApp Bots, Digital Marketing & AI Data Systems</p>
+
+<a class="btn" href="#services">Services</a>
+<a class="btn" href="#contact">Contact</a>
+
+</div>
 </div>
 
 <!-- SERVICES -->
-<section>
-<h2>My Services</h2>
+<div class="grid" id="services">
 
-<div class="grid">
-
+<!-- WEBSITE -->
 <div class="card">
 <h3>🌐 Website Development</h3>
-<p>I build modern websites for businesses and startups.</p>
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+<p>I build modern business websites and landing pages.</p>
 <span class="tag">HTML</span>
 <span class="tag">CSS</span>
 </div>
 
+<!-- WHATSAPP -->
 <div class="card">
 <h3>💬 WhatsApp Bots</h3>
-<p>I create automation bots for messaging and business workflows.</p>
+<img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80">
+<p>Automation bots for messaging and business workflows.</p>
 <span class="tag">Node.js</span>
-<span class="tag">API</span>
 </div>
 
+<!-- MARKETING -->
 <div class="card">
 <h3>📣 Digital Marketing</h3>
-<p>I help businesses grow online using ads and SEO.</p>
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=80">
+<p>Grow business using ads, SEO and social media.</p>
 <span class="tag">SEO</span>
-<span class="tag">Ads</span>
 </div>
 
+<!-- DATA ANNOTATION -->
 <div class="card">
-<h3>📊 Data Annotation</h3>
-<p>Labeling data for AI systems (images, text, objects).</p>
-<span class="tag">AI Training</span>
-<span class="tag">Labeling</span>
-</div>
-
-</div>
-</section>
-
-<!-- DATA ANNOTATION EXPLANATION -->
-<section id="annotation">
-<h2>📊 What is Data Annotation?</h2>
-
-<div class="card">
-<p>
-Data annotation is the process of labeling images, text, or videos so AI models can learn from them.
-For example, marking cars, people, or objects in images.
-</p>
-
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f31?auto=format&fit=crop&w=1200&q=80">
-</div>
-</section>
-
-<!-- CVAT DEMO -->
-<section id="cvat">
-<h2>🧠 CVAT Image Annotation Demo</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Image Annotation Example</h3>
-<p>Drawing boxes around objects in images using CVAT tool.</p>
-
+<h3>📊 Data Annotation (CVAT)</h3>
 <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80">
-</div>
-
-<div class="card">
-<h3>CVAT Workflow Video</h3>
-<p>How AI annotation tools work in real projects.</p>
-
-<video controls>
-<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-</video>
+<p>Label images and videos for AI training systems.</p>
+<span class="tag">AI Training</span>
 </div>
 
 </div>
-</section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Contact Me</h2>
+<div id="contact" class="grid">
 
 <div class="card">
-📧 Email: <b>nyabedaisaac@gmail.com</b><br>
-📱 WhatsApp: <b>254706180760</b>
-</div>
+<h2>Contact Me</h2>
+<p>📧 nyabedaisaac@gmail.com</p>
+<p>📱 254706180760</p>
 
-<a class="btn" href="mailto:nyabedaisaac@gmail.com">Email Me</a>
-
-<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20data%20annotation%20service">
+<a class="btn" href="https://wa.me/254706180760?text=Hi%20I%20need%20your%20services">
 WhatsApp Me
 </a>
 
-</section>
-
-<footer>
-© 2026 Santos Tech | AI Data Annotation Specialist
-</footer>
+</div>
 
 </div>
+
+<footer>
+© 2026 Santos Tech | AI & Digital Services
+</footer>
+
+<script>
+let music = document.getElementById("bgmusic");
+
+function toggleMusic(){
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+}
+
+/* try autoplay (browser may block it) */
+window.addEventListener("load", ()=>{
+music.volume = 0.5;
+music.play().catch(()=>{});
+});
+</script>
 
 </body>
 </html>
