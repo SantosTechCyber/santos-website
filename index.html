@@ -16,6 +16,7 @@ color:#e2e8f0;
 line-height:1.6;
 }
 
+/* NAV */
 .nav{
 position:fixed;
 top:0;
@@ -34,6 +35,7 @@ margin-left:15px;
 text-decoration:none;
 }
 
+/* HERO */
 .hero{
 padding:120px 20px 60px;
 text-align:center;
@@ -41,6 +43,7 @@ text-align:center;
 
 .hero h1{font-size:45px;}
 
+/* BUTTON */
 .btn{
 background:#38bdf8;
 color:black;
@@ -49,8 +52,10 @@ border-radius:8px;
 display:inline-block;
 margin-top:10px;
 text-decoration:none;
+cursor:pointer;
 }
 
+/* SECTION */
 .section{
 padding:60px 20px;
 border-top:1px solid #0f172a;
@@ -61,6 +66,7 @@ max-width:1100px;
 margin:auto;
 }
 
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -82,6 +88,54 @@ margin-bottom:10px;
 
 h2{text-align:center;margin-bottom:20px;}
 
+/* CHATBOT */
+.chatbot{
+position:fixed;
+bottom:90px;
+right:20px;
+width:300px;
+background:#0f172a;
+border-radius:10px;
+display:none;
+flex-direction:column;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.chat-header{
+background:#38bdf8;
+padding:10px;
+color:black;
+font-weight:bold;
+}
+
+.chat-messages{
+height:200px;
+overflow-y:auto;
+padding:10px;
+font-size:14px;
+}
+
+.chat-input{
+border:none;
+padding:10px;
+outline:none;
+width:100%;
+}
+
+/* FLOAT BUTTON */
+.chat-toggle{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#38bdf8;
+color:black;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+font-size:20px;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -97,13 +151,14 @@ opacity:0.5;
 <b>Santos Tech</b>
 <div>
 <a href="#packages">Packages</a>
+<a href="#opportunities">Opportunities</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
 <div class="hero">
-<h1>Grow Your Business with AI & Technology 🚀</h1>
-<p>Websites • Bots • Data • Automation</p>
+<h1>Grow Your Business with AI 🚀</h1>
+<p>Websites • Bots • Automation • Data</p>
 <a class="btn" href="https://wa.me/254706180760">Start Now</a>
 </div>
 
@@ -111,171 +166,53 @@ opacity:0.5;
 
 <div id="packages" class="section">
 <div class="container">
-<h2>All Packages</h2>
+<h2>Our Packages</h2>
 
 <div class="grid">
 
-<!-- LOOP STYLE CARDS -->
+<div class="card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"><h3>Starter Website</h3><p>Simple site for beginners.</p><p><b>KSh 3,000</b></p><a class="btn" href="https://wa.me/254706180760">Order</a></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<h3>1. Starter Website</h3>
-<p>Simple website for beginners.</p>
-<p><b>KSh 3,000</b></p>
-<a class="btn" href="https://wa.me/254706180760">Order</a>
+<div class="card"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a"><h3>Business Website</h3><p>Professional multi-page site.</p><p><b>KSh 10,000</b></p><a class="btn" href="https://wa.me/254706180760">Order</a></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a"><h3>E-commerce</h3><p>Online store.</p><p><b>KSh 15,000</b></p><a class="btn" href="https://wa.me/254706180760">Order</a></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1605379399642-870262d3d051"><h3>AI Automation</h3><p>Automate your work.</p><p><b>KSh 12,000</b></p><a class="btn" href="#">Order</a></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb"><h3>Data Services</h3><p>Data collection & cleaning.</p><p><b>KSh 6,000</b></p><a class="btn" href="#">Order</a></div>
+
+</div>
+</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a">
-<h3>2. Business Website</h3>
-<p>Professional multi-page site.</p>
-<p><b>KSh 10,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<!-- OPPORTUNITIES -->
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
-<h3>3. Landing Page</h3>
-<p>High converting page.</p>
-<p><b>KSh 3,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div id="opportunities" class="section">
+<div class="container">
+<h2>Opportunities with Coding</h2>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a">
-<h3>4. E-commerce</h3>
-<p>Online store setup.</p>
-<p><b>KSh 15,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<h3>5. Website Upgrade</h3>
-<p>Improve your existing site.</p>
-<p><b>KSh 6,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"><h3>Freelancing</h3><p>Work online and earn by building projects.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
-<h3>6. AI Automation</h3>
-<p>Automate tasks with AI.</p>
-<p><b>KSh 12,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d"><h3>Build Apps</h3><p>Create your own software or apps.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
-<h3>7. Bot Development</h3>
-<p>Custom bots for business.</p>
-<p><b>KSh 10,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"><h3>Digital Products</h3><p>Sell tools and templates.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28">
-<h3>8. WhatsApp Marketing</h3>
-<p>Automated messaging systems.</p>
-<p><b>KSh 8,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd"><h3>Data & AI</h3><p>Work with smart systems.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
-<h3>9. AI Content</h3>
-<p>Generate posts & content.</p>
-<p><b>KSh 5,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1603575448360-153f093fd0de"><h3>Game Dev</h3><p>Create games.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-<h3>10. Data Annotation</h3>
-<p>Label data for AI.</p>
-<p><b>KSh 7,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1584697964403-1f9b1f5e3c63"><h3>Teaching</h3><p>Teach coding.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
-<h3>11. Web Scraping</h3>
-<p>Extract useful data.</p>
-<p><b>KSh 6,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"><h3>Cybersecurity</h3><p>Protect systems.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-<h3>12. Data Processing</h3>
-<p>Clean & organize data.</p>
-<p><b>KSh 6,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28"><h3>Automation</h3><p>Build bots.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
-<h3>13. Lead Generation</h3>
-<p>Get business contacts.</p>
-<p><b>KSh 8,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"><h3>Cloud</h3><p>Manage servers.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<h3>14. Social Media Growth</h3>
-<p>Grow your audience.</p>
-<p><b>KSh 5,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766"><h3>UI/UX</h3><p>Design interfaces.</p></div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558655146-d09347e92766">
-<h3>15. Branding</h3>
-<p>Logo + identity.</p>
-<p><b>KSh 7,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511376777868-611b54f68947">
-<h3>16. Transcription</h3>
-<p>Audio to text.</p>
-<p><b>KSh 30/min</b></p>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4">
-<h3>17. CV + Portfolio</h3>
-<p>Professional resume.</p>
-<p><b>KSh 2,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216">
-<h3>18. Full Business Digital</h3>
-<p>Complete system setup.</p>
-<p><b>KSh 30,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-<h3>19. Full Growth Package</h3>
-<p>Everything + marketing.</p>
-<p><b>KSh 50,000</b></p>
-<a class="btn" href="#">Order</a>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984">
-<h3>20. Monthly Maintenance</h3>
-<p>Ongoing support.</p>
-<p><b>KSh 3,000/month</b></p>
-<a class="btn" href="#">Order</a>
-</div>
+<div class="card"><img src="https://images.unsplash.com/photo-1455390582262-044cdead277a"><h3>Writing</h3><p>Create tech guides.</p></div>
 
 </div>
 </div>
@@ -287,6 +224,43 @@ opacity:0.5;
 <h2>Contact</h2>
 <a class="btn" href="https://wa.me/254706180760">Chat on WhatsApp</a>
 </div>
+
+<!-- CHATBOT -->
+
+<div class="chatbot" id="chatbot">
+<div class="chat-header">AI Assistant</div>
+<div class="chat-messages" id="messages"></div>
+<input class="chat-input" type="text" placeholder="Ask something..." onkeypress="chat(event)">
+</div>
+
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<script>
+function toggleChat(){
+let bot=document.getElementById("chatbot");
+bot.style.display = bot.style.display==="flex"?"none":"flex";
+bot.style.flexDirection="column";
+}
+
+function chat(e){
+if(e.key==="Enter"){
+let input=e.target;
+let msg=input.value;
+let box=document.getElementById("messages");
+
+box.innerHTML += "<p><b>You:</b> "+msg+"</p>";
+
+let reply="We offer websites, bots, AI systems and automation.";
+
+if(msg.toLowerCase().includes("price")) reply="Prices start from KSh 3,000.";
+if(msg.toLowerCase().includes("contact")) reply="Click the WhatsApp button to contact us.";
+
+box.innerHTML += "<p><b>AI:</b> "+reply+"</p>";
+
+input.value="";
+}
+}
+</script>
 
 <footer>
 © 2026 Santos Tech
