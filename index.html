@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Santos Tech | AI Systems</title>
 
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -12,6 +14,20 @@ body{
 font-family:Segoe UI,sans-serif;
 background:#020617;
 color:#e2e8f0;
+overflow-x:hidden;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#020617;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:2000;
+font-size:22px;
 }
 
 /* NAV */
@@ -24,6 +40,7 @@ display:flex;
 justify-content:space-between;
 background:rgba(0,0,0,0.7);
 z-index:1000;
+backdrop-filter:blur(10px);
 }
 
 .navbar a{
@@ -56,6 +73,12 @@ text-decoration:none;
 margin:10px;
 display:inline-block;
 cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#0ea5e9;
+color:white;
 }
 
 /* SECTION */
@@ -75,6 +98,11 @@ align-items:center;
 .container img{
 width:100%;
 border-radius:15px;
+transition:0.4s;
+}
+
+.container img:hover{
+transform:scale(1.05);
 }
 
 video{
@@ -95,10 +123,26 @@ text-align:center;
 background:#020617;
 padding:15px;
 border-radius:10px;
+border:1px solid #0ea5e9;
 }
 
 @media(max-width:800px){
 .container{grid-template-columns:1fr;}
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:24px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+z-index:1000;
 }
 
 footer{
@@ -110,6 +154,8 @@ opacity:0.5;
 </head>
 
 <body>
+
+<div id="loader">Loading Santos Tech...</div>
 
 <div class="navbar">
 <b>Santos Tech</b>
@@ -128,97 +174,93 @@ opacity:0.5;
 </div>
 </div>
 
-<!-- WEB DEVELOPMENT -->
+<!-- SERVICES -->
 <div id="services" class="section">
-<div class="container">
+
+<div class="container" data-aos="fade-up">
 <div>
 <h2>🌐 Web Development</h2>
 <p>Modern responsive websites and systems for businesses.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4" type="video/mp4">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2022/08/31/130367-745306608_large.mp4">
 </video>
 </div>
 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 </div>
-</div>
 
-<!-- DATA ANNOTATION -->
-<div class="section">
-<div class="container">
+<div class="container" data-aos="fade-up">
 <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
 <div>
 <h2>📊 Data Annotation</h2>
 <p>High-quality labeling and AI training datasets.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4" type="video/mp4">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2022/12/13/143164-779909162_large.mp4">
 </video>
 </div>
 </div>
-</div>
 
-<!-- VCF CREATION -->
-<div class="section">
-<div class="container">
+<div class="container" data-aos="fade-up">
 <div>
 <h2>📇 VCF Creation</h2>
-<p>Bulk contact creation for marketing and distribution systems.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
-<source src="https://cdn.pixabay.com/video/2023/01/19/146615-791997918_large.mp4" type="video/mp4">
+<p>Lead generation and contact systems for marketing.</p>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2023/01/19/146615-791997918_large.mp4">
 </video>
 </div>
 <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
 </div>
-</div>
 
-<!-- WEB SCRAPING -->
-<div class="section">
-<div class="container">
+<div class="container" data-aos="fade-up">
 <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
 <div>
 <h2>🕸️ Web Scraping</h2>
-<p>Extract data from websites for analysis and automation.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
-<source src="https://cdn.pixabay.com/video/2022/10/10/135693-759580624_large.mp4" type="video/mp4">
+<p>Extract data for automation and business intelligence.</p>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2022/10/10/135693-759580624_large.mp4">
 </video>
 </div>
 </div>
-</div>
 
-<!-- TRANSCRIPTION -->
-<div class="section">
-<div class="container">
+<div class="container" data-aos="fade-up">
 <div>
 <h2>🎧 Transcription</h2>
 <p>Convert audio and video into accurate text.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1511376777868-611b54f68947">
-<source src="https://cdn.pixabay.com/video/2022/11/03/137410-767188918_large.mp4" type="video/mp4">
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2022/11/03/137410-767188918_large.mp4">
 </video>
 </div>
 <img src="https://images.unsplash.com/photo-1511376777868-611b54f68947">
 </div>
-</div>
 
-<!-- BOT DEVELOPMENT -->
-<div class="section">
-<div class="container">
+<div class="container" data-aos="fade-up">
 <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
 <div>
 <h2>🤖 Bot Development</h2>
-<p>Automation bots for WhatsApp, business, and AI systems.</p>
-<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1605379399642-870262d3d051">
-<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4" type="video/mp4">
+<p>Automation bots for WhatsApp and business systems.</p>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/video/2023/02/27/151083-803623403_large.mp4">
 </video>
 </div>
 </div>
+
+</div>
+
+<!-- WHY US -->
+<div class="section" style="text-align:center;" data-aos="fade-up">
+<h2>Why Choose Santos Tech?</h2>
+<p>✔ Fast Delivery</p>
+<p>✔ Affordable Pricing</p>
+<p>✔ AI-Powered Solutions</p>
+<p>✔ 24/7 Support</p>
 </div>
 
 <!-- STATS -->
 <div class="section">
 <h2 style="text-align:center;">📊 Stats</h2>
 <div class="dashboard">
-<div class="stat"><h3>12+</h3><p>Orders</p></div>
-<div class="stat"><h3>5+</h3><p>Clients</p></div>
-<div class="stat"><h3>KSh 1,200+</h3><p>Revenue</p></div>
+<div class="stat"><h3>50+</h3><p>Projects</p></div>
+<div class="stat"><h3>20+</h3><p>Clients</p></div>
+<div class="stat"><h3>KSh 25,000+</h3><p>Revenue</p></div>
 </div>
 </div>
 
@@ -232,27 +274,42 @@ opacity:0.5;
 © 2026 Santos Tech
 </footer>
 
-<!-- AUDIO -->
-<audio id="introAudio">
-<source src="https://cdn.pixabay.com/download/audio/2023/03/15/audio_0c2f0c5e6d.mp3" type="audio/mpeg">
-</audio>
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/254706180760" class="whatsapp-float">💬</a>
 
+<!-- AUDIO -->
 <audio id="clickSound">
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8a9b3a7e7.mp3" type="audio/mpeg">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8a9b3a7e7.mp3">
 </audio>
 
 <audio id="bgAudio" loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3a6b3e0f5c.mp3" type="audio/mpeg">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3a6b3e0f5c.mp3">
 </audio>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
 <script>
+// LOADER
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
+// AOS
+AOS.init();
+
+// AI VOICE
 function playIntro(){
-document.getElementById("introAudio").play();
+const msg = new SpeechSynthesisUtterance(
+"Welcome to Santos Tech. We build AI systems, automation, and digital solutions."
+);
+speechSynthesis.speak(msg);
+
 let bg=document.getElementById("bgAudio");
 bg.volume=0.2;
 bg.play();
 }
 
+// CLICK SOUND
 document.querySelectorAll(".btn").forEach(btn=>{
 btn.addEventListener("click",()=>{
 document.getElementById("clickSound").play();
