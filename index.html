@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Santos Tech | AI Systems</title>
-
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<title>Santos Tech</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -17,256 +15,164 @@ color:#e2e8f0;
 }
 
 /* NAV */
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-padding:15px 20px;
+.nav{
 display:flex;
 justify-content:space-between;
-background:rgba(0,0,0,0.7);
-z-index:1000;
+padding:20px;
+position:fixed;
+width:100%;
+background:#020617cc;
 backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-.navbar a{
+.nav a{
 color:#38bdf8;
 margin-left:15px;
 text-decoration:none;
 }
 
-/* HERO */
+/* HERO SPLIT */
 .hero{
-height:100vh;
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
 align-items:center;
-justify-content:center;
-text-align:center;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
+height:100vh;
+padding:0 10%;
 }
 
+.hero h1{
+font-size:55px;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+}
+
+/* BUTTON */
 .btn{
-padding:12px 20px;
 background:#38bdf8;
-color:black;
+padding:12px 20px;
 border-radius:8px;
-text-decoration:none;
-margin:10px;
+color:black;
+display:inline-block;
+margin-top:15px;
 cursor:pointer;
 }
 
-.btn:hover{background:#0ea5e9;color:white;}
-
-/* SECTION */
-.section{padding:80px 20px;}
-.container{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-align-items:center;
+/* SERVICES GRID */
+.services{
+padding:80px 10%;
 }
 
-.container img{width:100%;border-radius:15px;}
-
-@media(max-width:800px){
-.container{grid-template-columns:1fr;}
-}
-
-/* PRICING */
-.pricing{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-margin-top:40px;
+margin-top:30px;
 }
 
 .card{
-background:#0f172a;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
 padding:20px;
-border-radius:12px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* SECTION TITLE */
+h2{text-align:center;font-size:32px;}
+
+/* CONTACT */
+.contact{
 text-align:center;
-border:1px solid #38bdf8;
+padding:80px 20px;
 }
 
-/* PORTFOLIO */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-/* CHATBOT */
-.chatbot{
-position:fixed;
-bottom:90px;
-right:20px;
-width:300px;
-background:#0f172a;
-border-radius:10px;
-display:none;
-flex-direction:column;
-}
-
-.chatbot-header{
-background:#38bdf8;
-padding:10px;
-color:black;
-}
-
-.chatbot-messages{
-height:200px;
-overflow-y:auto;
-padding:10px;
-}
-
-.chatbot input{
-border:none;
-padding:10px;
-outline:none;
-}
-
-/* FLOAT BTN */
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#38bdf8;
-padding:15px;
-border-radius:50%;
-cursor:pointer;
+/* MOBILE */
+@media(max-width:800px){
+.hero{grid-template-columns:1fr;height:auto;padding-top:100px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
+<div class="nav">
 <b>Santos Tech</b>
 <div>
 <a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
 <div>
-<h1>Santos Tech 🚀</h1>
-<p>AI Systems • Automation • Digital Solutions</p>
-<button class="btn" onclick="playIntro()">🔊 AI Voice</button>
+<h1>AI Systems That Grow Your Business 🚀</h1>
+<p>Automation • Bots • Data • Web Solutions</p>
+<div class="btn" onclick="speak()">🔊 AI Voice</div>
 </div>
+
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
 </div>
 
 <!-- SERVICES -->
-<div id="services" class="section">
-<div class="container">
-<div>
-<h2>🌐 Web Development</h2>
-<p>Modern responsive systems.</p>
-</div>
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-</div>
-</div>
+<div id="services" class="services">
+<h2>Our Services</h2>
 
-<!-- PRICING -->
-<div id="pricing" class="section">
-<h2 style="text-align:center;">Pricing</h2>
-<div class="pricing">
+<div class="grid">
 
 <div class="card">
-<h3>Starter</h3>
-<p>KSh 3,000</p>
-<p>Basic Website</p>
-<button class="btn" onclick="pay()">Pay Now</button>
+<h3>🌐 Web Development</h3>
+<p>Modern, fast, responsive websites.</p>
 </div>
 
 <div class="card">
-<h3>Pro</h3>
-<p>KSh 8,000</p>
-<p>Automation + Website</p>
-<button class="btn" onclick="pay()">Pay Now</button>
+<h3>📊 Data Annotation</h3>
+<p>Training data for AI systems.</p>
 </div>
 
 <div class="card">
-<h3>Business</h3>
-<p>KSh 15,000</p>
-<p>Full AI System</p>
-<button class="btn" onclick="pay()">Pay Now</button>
+<h3>📇 Lead Systems</h3>
+<p>Smart contact & growth tools.</p>
 </div>
 
-</div>
+<div class="card">
+<h3>🕸️ Web Scraping</h3>
+<p>Extract data for insights.</p>
 </div>
 
-<!-- PORTFOLIO -->
-<div class="section">
-<h2 style="text-align:center;">Portfolio</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
-<img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
+<div class="card">
+<h3>🎧 Transcription</h3>
+<p>Audio to text conversion.</p>
+</div>
+
+<div class="card">
+<h3>🤖 Bot Development</h3>
+<p>Automation for WhatsApp & business.</p>
+</div>
+
 </div>
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="section" style="text-align:center;">
-<h2>Contact</h2>
-<a class="btn" href="https://wa.me/254706180760">WhatsApp</a>
+<div id="contact" class="contact">
+<h2>Start Your Project</h2>
+<a class="btn" href="https://wa.me/254706180760">Chat on WhatsApp</a>
 </div>
-
-<!-- CHATBOT -->
-<div class="chatbot" id="chatbot">
-<div class="chatbot-header">AI Assistant</div>
-<div class="chatbot-messages" id="messages"></div>
-<input type="text" placeholder="Ask something..." onkeypress="handleChat(event)">
-</div>
-
-<div class="float" onclick="toggleChat()">💬</div>
 
 <script>
-// AI VOICE
-function playIntro(){
-const msg=new SpeechSynthesisUtterance("Welcome to Santos Tech.");
+function speak(){
+let msg=new SpeechSynthesisUtterance(
+"Welcome to Santos Tech. We build powerful AI solutions."
+);
 speechSynthesis.speak(msg);
-}
-
-// CHATBOT
-function toggleChat(){
-let bot=document.getElementById("chatbot");
-bot.style.display=bot.style.display==="flex"?"none":"flex";
-bot.style.flexDirection="column";
-}
-
-function handleChat(e){
-if(e.key==="Enter"){
-let input=e.target;
-let msg=input.value;
-let box=document.getElementById("messages");
-
-box.innerHTML+=`<p><b>You:</b> ${msg}</p>`;
-
-let reply="We offer web development, bots, AI and automation.";
-
-if(msg.toLowerCase().includes("price")) reply="Prices start from KSh 3,000.";
-
-box.innerHTML+=`<p><b>AI:</b> ${reply}</p>`;
-
-input.value="";
-}
-}
-
-// M-PESA (SIMULATION)
-function pay(){
-alert("M-Pesa API integration required (Daraja).");
 }
 </script>
 
