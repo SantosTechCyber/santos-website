@@ -12,15 +12,17 @@ body{
 font-family:Segoe UI,sans-serif;
 background:#020617;
 color:#e2e8f0;
+line-height:1.6;
 }
 
 /* NAV */
 .nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 20px;
 display:flex;
 justify-content:space-between;
-padding:20px;
-position:fixed;
-width:100%;
 background:#020617cc;
 backdrop-filter:blur(10px);
 z-index:1000;
@@ -32,71 +34,69 @@ margin-left:15px;
 text-decoration:none;
 }
 
-/* HERO SPLIT */
+/* HERO */
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-height:100vh;
-padding:0 10%;
+padding:120px 20px 60px;
+text-align:center;
 }
 
-.hero h1{
-font-size:55px;
-}
+.hero h1{font-size:45px;margin-bottom:10px;}
 
-.hero img{
-width:100%;
-border-radius:20px;
-}
-
-/* BUTTON */
 .btn{
 background:#38bdf8;
+color:black;
 padding:12px 20px;
 border-radius:8px;
-color:black;
 display:inline-block;
 margin-top:15px;
-cursor:pointer;
+text-decoration:none;
 }
 
-/* SERVICES GRID */
-.services{
-padding:80px 10%;
+/* SECTION */
+.section{
+padding:60px 20px;
+border-top:1px solid #0f172a;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
 }
 
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-padding:20px;
+.grid img{
+width:100%;
 border-radius:15px;
-transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-8px);
+.info{
+margin-top:15px;
 }
 
-/* SECTION TITLE */
-h2{text-align:center;font-size:32px;}
+.info p{margin-bottom:10px;}
 
-/* CONTACT */
-.contact{
-text-align:center;
-padding:80px 20px;
+.ads{
+background:#0f172a;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+border-left:4px solid #38bdf8;
 }
 
-/* MOBILE */
 @media(max-width:800px){
-.hero{grid-template-columns:1fr;height:auto;padding-top:100px;}
+.grid{grid-template-columns:1fr;}
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:0.5;
 }
 </style>
 </head>
@@ -111,70 +111,156 @@ padding:80px 20px;
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-<div>
 <h1>AI Systems That Grow Your Business 🚀</h1>
 <p>Automation • Bots • Data • Web Solutions</p>
-<div class="btn" onclick="speak()">🔊 AI Voice</div>
-</div>
-
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<a href="#services" class="btn">Explore Services</a>
 </div>
 
 <!-- SERVICES -->
-<div id="services" class="services">
-<h2>Our Services</h2>
+<div id="services">
 
-<div class="grid">
+<!-- WEB DEV -->
+<div class="section">
+<div class="container grid">
+<div>
+<h2>🌐 Web Development</h2>
+<div class="info">
+<p>We build modern websites that help businesses grow online. A website is your digital office where customers learn about your services and contact you.</p>
 
-<div class="card">
-<h3>🌐 Web Development</h3>
-<p>Modern, fast, responsive websites.</p>
-</div>
+<p>We create responsive designs that work on phones, tablets, and desktops.</p>
 
-<div class="card">
-<h3>📊 Data Annotation</h3>
-<p>Training data for AI systems.</p>
-</div>
+<p>Technologies used include HTML, CSS, JavaScript, and backend systems.</p>
 
-<div class="card">
-<h3>📇 Lead Systems</h3>
-<p>Smart contact & growth tools.</p>
-</div>
-
-<div class="card">
-<h3>🕸️ Web Scraping</h3>
-<p>Extract data for insights.</p>
-</div>
-
-<div class="card">
-<h3>🎧 Transcription</h3>
-<p>Audio to text conversion.</p>
-</div>
-
-<div class="card">
-<h3>🤖 Bot Development</h3>
-<p>Automation for WhatsApp & business.</p>
+<div class="ads">
+<b>Use Case:</b> A business website can increase trust and bring customers 24/7.
 </div>
 
 </div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+</div>
+</div>
+
+<!-- DATA ANNOTATION -->
+<div class="section">
+<div class="container grid">
+<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb">
+
+<div>
+<h2>📊 Data Annotation</h2>
+<div class="info">
+<p>Data annotation is the process of labeling data so AI systems can learn from it.</p>
+
+<p>For example, labeling images, text, or audio so machine learning models understand patterns.</p>
+
+<p>This is essential for AI training and automation systems.</p>
+
+<div class="ads">
+<b>Example:</b> Labeling images of cars so an AI can recognize vehicles.
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- VCF -->
+<div class="section">
+<div class="container grid">
+<div>
+<h2>📇 Lead Generation Systems</h2>
+<div class="info">
+<p>We create systems that help businesses collect and manage contacts.</p>
+
+<p>This includes smart contact tools, marketing systems, and structured data organization.</p>
+
+<div class="ads">
+<b>Benefit:</b> Helps businesses reach more customers and increase engagement.
+</div>
+
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+</div>
+</div>
+
+<!-- SCRAPING -->
+<div class="section">
+<div class="container grid">
+<img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd">
+
+<div>
+<h2>🕸️ Web Scraping</h2>
+<div class="info">
+<p>Web scraping allows extraction of useful data from websites.</p>
+
+<p>This can be used for market research, price comparison, and business intelligence.</p>
+
+<div class="ads">
+<b>Example:</b> Collecting product prices from different websites automatically.
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- TRANSCRIPTION -->
+<div class="section">
+<div class="container grid">
+<div>
+<h2>🎧 Transcription</h2>
+<div class="info">
+<p>We convert audio and video content into written text.</p>
+
+<p>This is useful for interviews, podcasts, and business records.</p>
+
+<div class="ads">
+<b>Use Case:</b> Turning meetings into written notes.
+</div>
+
+</div>
+</div>
+
+<img src="https://images.unsplash.com/photo-1511376777868-611b54f68947">
+</div>
+</div>
+
+<!-- BOT -->
+<div class="section">
+<div class="container grid">
+<img src="https://images.unsplash.com/photo-1605379399642-870262d3d051">
+
+<div>
+<h2>🤖 Bot Development</h2>
+<div class="info">
+<p>We build automation bots that handle tasks automatically.</p>
+
+<p>Examples include customer support bots, WhatsApp bots, and business automation tools.</p>
+
+<div class="ads">
+<b>Benefit:</b> Saves time and improves efficiency.
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="contact">
+<div id="contact" class="section" style="text-align:center;">
 <h2>Start Your Project</h2>
 <a class="btn" href="https://wa.me/254706180760">Chat on WhatsApp</a>
 </div>
 
-<script>
-function speak(){
-let msg=new SpeechSynthesisUtterance(
-"Welcome to Santos Tech. We build powerful AI solutions."
-);
-speechSynthesis.speak(msg);
-}
-</script>
+<footer>
+© 2026 Santos Tech
+</footer>
 
 </body>
 </html>
