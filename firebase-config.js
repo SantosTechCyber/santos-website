@@ -1,11 +1,8 @@
-// Firebase Configuration
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
-
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyAMfWRUyqlk7R8w01wKd3zXGkdcVMl_HL0",
   authDomain: "santos-tech-615d1.firebaseapp.com",
   projectId: "santos-tech-615d1",
   storageBucket: "santos-tech-615d1.firebasestorage.app",
@@ -14,7 +11,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 
 export { auth };
