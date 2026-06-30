@@ -29,7 +29,7 @@ loginBtn.addEventListener("click", async () => {
 
         const user = userCredential.user;
 
-        // Replace this with YOUR admin email
+        // Admin Email
         const ADMIN_EMAIL = "nyabedaisaac@gmail.com";
 
         if (user.email === ADMIN_EMAIL) {
@@ -38,6 +38,7 @@ loginBtn.addEventListener("click", async () => {
             localStorage.setItem("role", "member");
         }
 
+        // Redirect after successful login
         window.location.href = "index.html";
 
     } catch (err) {
@@ -53,12 +54,13 @@ loginBtn.addEventListener("click", async () => {
                 break;
 
             case "auth/too-many-requests":
-                error.textContent = "Too many attempts. Please try again later.";
+                error.textContent = "Too many login attempts. Please try again later.";
                 break;
 
             default:
-                error.textContent = "Login failed. Please try again.";
+                error.textContent = err.message;
         }
+
     }
 
 });
